@@ -2116,9 +2116,7 @@ out_err:
 	return 0;
 
 }
-<<<<<<< HEAD
 EXPORT_SYMBOL(default_iommu_map_sg);
-=======
 
 size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
 		    struct scatterlist *sg, unsigned int nents, int prot)
@@ -2127,7 +2125,6 @@ size_t iommu_map_sg(struct iommu_domain *domain, unsigned long iova,
 	return __iommu_map_sg(domain, iova, sg, nents, prot, GFP_KERNEL);
 }
 EXPORT_SYMBOL_GPL(iommu_map_sg);
->>>>>>> fe4d70866839 (iommu: Add gfp parameter to iommu_ops::map)
 
 size_t iommu_map_sg_atomic(struct iommu_domain *domain, unsigned long iova,
 		    struct scatterlist *sg, unsigned int nents, int prot)
